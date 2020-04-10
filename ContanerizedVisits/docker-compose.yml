@@ -2,6 +2,9 @@ version: "3.7"
 services:
     hola-service:
         image: hola-api
+        build:
+            context: ContanerizedVisits
+            dockerfile: Dockerfile
         deploy:
             replicas: 4
             resources:
