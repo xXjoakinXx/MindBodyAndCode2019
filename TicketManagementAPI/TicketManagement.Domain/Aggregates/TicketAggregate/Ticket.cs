@@ -80,6 +80,7 @@ namespace TicketManagement.Domain.Aggregates.TicketAggregate
                 throw new TicketException("Ticket must be in BUILDING state to add new products");
 
             var product = new Product(name, price);
+            product.ApplyDiscount(discount);
 
             Products.Add(product);
         }
